@@ -120,10 +120,12 @@ body {
 
 .six img {
   display: inline-block;
-  max-width: 45%;
+  max-width: 50%;
   height: auto;
+  border-radius: 25px; /* Soft edges */
+  border: 6px solid #fff; /* Polaroid frame look */
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5); /* Pink glow */
 }
-
 .six .hat {
   position: absolute;
   width: 80px;
