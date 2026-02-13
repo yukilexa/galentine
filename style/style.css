@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   font-family: "Playwrite NZ", cursive;
+  background-color: #fdf2f2; /* Very light pastel pink */
 }
 
 .container {
@@ -15,6 +16,7 @@ body {
   visibility: hidden;
   position: relative;
   overflow: hidden;
+  background-color: #fff0f3; /* Slightly different pastel for depth */
 }
 
 .container div.six {
