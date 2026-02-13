@@ -298,11 +298,28 @@ const fetchData = () => {
 };
 
 // Run fetch and animation in sequence
+// 1. Setup the Fetch
 const resolveFetch = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     fetchData();
     resolve("Fetch done!");
   });
 };
 
-resolveFetch().then(animationTimeline());
+// 2. Wait for Manu to click "Open Your Gift"
+const startScreen = document.getElementById("start-screen");
+const beginBtn = document.getElementById("begin-btn");
+
+beginBtn.addEventListener("click", () => {
+    // Hide the gate
+    startScreen.style.display = "none";
+    
+    // Start the Music
+    const audio = document.getElementById("bgMusic");
+    audio.play().catch(e => console.log("Audio failed", e));
+    
+    // Start the Animation
+    resolveFetch().then(() => {
+        animationTimeline();
+    });
+});
